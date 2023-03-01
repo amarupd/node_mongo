@@ -1,0 +1,177 @@
+1. view all database
+   show dbs;
+
+2. create or switch database
+   use <db name>;
+
+3. to check in which database u r working
+   db;
+
+4. delete database
+   db.dropDatabase();
+
+5. if u want to check the collection
+   show collections;
+
+6. find only one data entry
+   db.<collection name>.findOne();
+
+7. find all the details in the collections
+   db.<collection name>.find();
+
+8. to create collection
+   db.createCollection('<collection name>);
+   example :- db.createCollection('comments');
+
+9. to delete collection
+   db.<collection_name>.drop();
+   example :- db.comments.drop();
+
+10. Insert one rows in the collection
+    db.<collection_name>.insert({
+      '<key>':'<value>',
+      '<key>':'<value>',
+      '<key>':'<value>'
+    })
+
+    example:-
+    db.comments.insert({
+      'name':'Amar dutt upadhyay',
+      'Dob':'10-september-1999',
+      'workingsince':5
+    })
+
+11. Insert many rows in the collection_name
+    db.<collection_name>.insertMany([{                        //Note we can use  insert also inplace of insertMany function to insert multiple  row in the collection
+      '<key>':'<value>',
+      '<key>':'<value>',
+      '<key>':'<value>'
+    },
+    {
+      '<key>':'<value>',                                      //NOTE:- WE CAN ADD ANY NUMBER OF KEY VALUES TO ROWS
+      '<key>':'<value>',                                      //BECAUSE IT IS NOT THE RDBMS SO DO WHATEVER U WANT
+      '<key>':'<value>',
+      '<key>':'<value>'
+    },
+    {
+      '<key>':'<value>',
+      '<key>':'<value>',
+      '<key>':'<value>',
+      '<key>':'<value>',
+      '<key>':'<value>'
+    }])
+
+    example:-
+    db.comments.insertMany([{
+      'name':'Gautam bhaia',
+      'Dob':'01-january-1991',
+      'workingsince':13
+    },
+    {
+      'name':'Ashish sir',
+      'Dob':'01-february-1993',
+      'workingsince':12,
+      'working_as':'human resource'
+    },
+    {
+      'name':'Vikas sir',
+      'Dob':'15-march-1980',
+      'workingsince':7,
+      'role':'Company TPO',
+      'occupation':'software engineer'
+    }
+    ])
+
+
+12. Show all the row in the collection
+     db.<collection_name>.find();
+     example:-
+     db.comments.find();
+
+13. limit for search
+     db.comments.find().limit(<number of elements>)
+
+14. search element using where clause
+       db.comments.find({workingsince:5})
+       db.comments.find({name:'amar dutt upadhyay'})
+
+15. count the rows in collection
+	 db.comments.find().count()
+
+16. count can also be used as a limit function so that it will count the number of rows in a limited by the condition to be used further it will give you integer value
+	 db.comments.find().limit(4).count()
+	 4
+
+17. count the rows in collection with where clause
+	 db.comments.find({name:'Amar dutt upadhyay'}).count()
+
+18. find the first row matching with queryy we us findOne()
+	 db.comments.findOne({name:'Amar dutt upadhyay'})
+
+19. to update in mongo database for one value we use updateOne()
+	 db.<collection_name>.updateOne({condition for matching},{$set:{updation value here}})
+	 db.comments.updateOne({name:'Amar dutt upadhyay'},{$set:{workingsince:10}})
+
+20. to update many value or increment the value
+	 db.comments.updateMany({},{$inc:{workingsince:1}})
+	 db.comments.upfateMany({value to be matched},{value to be updated})
+
+21. if you want to update the value of which is not present in the data and u want to insert that data just add {upsert:true}
+	 db.comments.update({name:'harry2'},
+	 {$set:{
+	 'name':'Piyush sir',
+	 'Dob':'12-december-1986',
+	 'workingsince':25,
+	 'role':'Company TPO',
+	 'occupation':'software engineer'}},
+	 {upsert:true});
+
+22. for renaming any key we use
+	  db.comments.updateMany({name:'Piyush sir'},{$rename:{workingsince:'membersince'}})
+
+23. Delete row
+     db.comments.deleteOne({name:'gjdghfiwuhefnfd'})
+
+24. Delete many row
+     db.comments.deleteMany({key:'value'})
+
+25. Count row in a collection
+     db.comments.countDocuments()
+
+26. Delete many row
+     db.comments.deleteMany({key:'value'})
+
+27. less than many row
+     db.comments.find({membersince:{$lt:9}})
+
+28. greater than many row
+     db.comments.find({membersince:{$gt:9}})
+     
+29. $eq: Values are equal
+    $ne: Values are not equal
+    $gt: Value is greater than another value
+    $gte: Value is greater than or equal to another value
+    $lt: Value is less than another value
+    $lte: Value is less than or equal to another value
+    $in: Value is matched within an array
+
+30. date function to use
+    'currentDate':Date();
+
+31. $currentDate: Sets the field value to the current date
+    $inc: Increments the field value
+    $rename: Renames the field
+    $set: Sets the value of a field
+    $unset: Removes the field from the document
+
+32. for Array function
+     $ : Acts as a placeholder to update the first element that matches the query condition.
+     $[] : Acts as a placeholder to update all elements in an array for the documents that match the query condition.
+     $[<identifier>] : Acts as a placeholder to update all elements that match the arrayFilters condition for the documents that match the query condition.
+     $addToSet : Adds elements to an array only if they do not already exist in the set.
+     $pop : Removes the first or last item of an array.
+     $pull : Removes all array elements that match a specified query.
+     $push : Adds an item to an array.
+     $pullAll : Removes all matching values from an array.
+
+33. 
