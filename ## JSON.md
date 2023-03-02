@@ -1,960 +1,632 @@
-## JSON
+## MongoDB
 
-#### Q1. By convention, what name is used for the first key in a JSON schema?
+#### Q1. Which command adds members to the replica set from MongoDB shell?
 
-- [ ] schema
-- [x] \$schema
-- [ ] JsonSchema
-- [ ] JSONschema
+- [x] `rs.add("<hostname>")`
+- [ ] `replicaSetAdd("<hostname>")`
+- [ ] `rs.insert("<hostname>")`
+- [ ] `replica.add("<hostname>")`
 
-#### Q2. Which code is the closest JSON equivalent of the data shown?
+#### Q2. Which MongoDB shell command should you use to back up a database?
 
-```
-[
-    'red',
-    'blue',
-    'green'
-]
-```
+- [ ] restore
+- [ ] backup
+- [ ] mongobackup
+- [x] mongodump
 
-- [ ] A
+#### Q3. Which shell query displays all citizens with an age greater than or equal to 21?
 
-```json
-["red", "blue", "green"]
-```
+- [ ] `db.citizens.select('WHERE age >= 21')`
+- [ ] `db.citizens.where('age >= 21')`
+- [ ] `db.citizens.find('WHERE age >= 21')`
+- [x] `db.citizens.find({age: {$gte: 21}})`
 
-- [x] B
-
-```json
-["red", "blue", "green"]
-```
-
-- [ ] C
-
-```json
-{
-  "color": "red",
-  "color": "blue",
-  "color": "green"
-}
-```
-
-- [ ] D
-
-```json
-{
-  "red": "red",
-  "blue": "blue"
-}
-```
-
-#### Q3. Which JavaScript method converts a JavaScript value to Json?
-
-- [ ] JSON.parse()
-- [x] JSON.stringify()
-- [ ] JSON.toString()
-- [ ] JSON.objectify()
-
-#### Q4. Which data type is NOT part of JSON standard?
-
-- [ ] string
-- [ ] number
-- [x] date
-- [ ] array
-
-#### Q5. Which term is commonly used to refer to converting data to JSON?
-
-- [ ] unpacking
-- [x] serialization
-- [ ] deserialization
-- [ ] parsing
-
-#### Q6. Which code uses the correct JSON syntax to encode the key/value pair shown?
-
-`accountNum: '000605802'`
-
-- [x] "accountNum": "000605802"
-- [ ] accountNum: "000605802"
-- [ ] "accountNum": 000605802
-- [ ] accountNum: 000605802
-
-#### Q7. What character do you specify before a JSON control character when you want to use that control characters as a literal part of a string?
-
-- [ ] `/`
-- [x] `\`
-- [ ] `:`
-- [ ] `{`
-
-#### Q8. Which data type is part of the JSON standard?
-
-- [x] Boolean
-- [ ] map
-- [ ] promise
-- [ ] function
-
-#### Q9. Which key name is used to specify properties that must be included for JSON to be valid?
-
-- [ ] important
-- [ ] base
-- [ ] core
-- [x] required
-
-#### Q10. Which is the valid JSON equivalent of the data shown?
-
-```
-{
-	photo: {
-	width: 1600,
-	height: 900,
-	binaries: {
-	url: 'https://www.example.com/images/34097349843',
-	thumbnail: 'https://www.example.com/images/thumbs/34097349843'
-	},
-	animated: false,
-	tags: [116, 943, 234, 38793],
-	}
-}
-```
-
-- [ ] A
-
-```json
-{
-  "photo": {
-    "width": 1600,
-    "height": 900,
-    "binaries": {
-      "url": "https://www.example.com/images/34097349843",
-      "thumbnail": "https://www.example.com/images/thumbs/34097349843"
-    },
-    "animated": "false",
-    "tags": [116, 943, 234, 38793]
-  }
-}
-```
-
-- [ ] B
-
-```json
-{
-  "photo": {
-    "width": 1600,
-    "height": 900,
-    "binaries": {
-      "url": "https://www.example.com/images/34097349843",
-      "thumbnail": "https://www.example.com/images/thumbs/34097349843"
-    },
-    "animated": false,
-    "tags": [116, 943, 234, 38793]
-  }
-}
-```
-
-- [x] C
-
-```json
-{
-  "photo": {
-    "width": 1600,
-    "height": 900,
-    "binaries": {
-      "url": "https://www.example.com/images/34097349843",
-      "thumbnail": "https://www.example.com/images/thumbs/34097349843"
-    },
-    "animated": false,
-    "tags": [116, 943, 234, 38793]
-  }
-}
-```
-
-- [ ] D
-
-```json
-{
-  "photo": {
-    "width": "1600",
-    "height": "900",
-    "binaries": {
-      "url": "https://www.example.com/images/34097349843",
-      "thumbnail": "https://www.example.com/images/thumbs/34097349843"
-    },
-    "animated": "false",
-    "tags": ["116", "943", "234", "38793"]
-  }
-}
-```
-
-#### Q11. How do you store several paragraphs of text as a string in JSON?
-
-- [x] Escape all whitespaces expect space characters.
-- [ ] Escape line breaks.
-- [ ] Escape paragraphs.
-- [ ] Remove all whitespaces
-
-#### Q12. What data type is represented by the value of the key/value pair shown?
-
-`loggedIn: true`
-
-- [ ] string
-- [x] Boolean
-- [ ] number
-- [ ] object
-
-#### Q13. If you need to store the loggedIn status of a user in JSON as a boolean, what is the correct syntax?
-
-- [ ] "loggedIn": (true)
-- [ ] loggedIn: "true"
-- [x] "loggedIn": true
-- [ ] loggedIn: {true}
-
-#### Q14. What does JSON with padding (JSON-P) use to make a request?
-
-- [ ] an `<origin>` element
-- [ ] a header request
-- [x] the `<script>` element
-- [ ] the XMLHttpRequest object
-
-#### Q15. Which value is supported in the JSON specifications?
-
-- [ ] undefined
-- [ ] infinity
-- [ ] NaN
-- [x] null
-
-#### Q16. Which JavaScript method converts JSON to a JavaScript value?
-
-- [x] JSON.parse()
-- [ ] JSON.stringify()
-- [ ] JSON.toString()
-- [ ] JSON.objectify()
-
-#### Q17. Transferring JSON information from client to server and back again often includes HTTP requests. Match each method with the best choice describing its use.
-
-    1.Sends data to specific server to create or update information.
-    2.Sends data to specific server to create or update information without the risk of creating the resource more than once.
-    3.Previews what the GET request response might be without the body of the text.
-    4.Learns the communication channels used by the target source.
-    5.Requests information from a specific source.
-    6.Removes information.
-
-- [ ] 1.POST 2.DELETE 3.OPTIONS 4.HEADER 5.GET 6.PUT
-- [ ] 1.POST 2.PUT 3.HEADER 4.OPTIONS 5.GET 6.DELETE
-- [ ] 1.POST 2.DELETE 3.OPTIONS 4.HEADER 5.GET 6.PUT
-- [x] 1.POST 2.PUT 3.HEADER 4.OPTIONS 5.GET 6.DELETE
-
-#### Q18. Which code uses valid JSON syntax for the text "Centennial Olympics?
-
-- [ ] A
-
-```json
-{
-"host": "Atlanta",
-"year": 1996
-/_ Centennial Olympics _/
-}
-```
-
-- [ ] B
-
-```json
-{
-  "host": "Atlanta",
-  "year": 1996
-  // Centennial Olympics
-}
-```
-
-- [ ] C
-
-```json
-{
-  "host": "Atlanta",
-  "year": 1996,
-  "comment": "Centennial Olympics"
-}
-```
-
-- [ ] D
-
-```json
-{
-  "host": "Atlanta",
-  "year": 1996,
-  \"Centennial Olympics\"
-}
-```
-
-- [x] E
-
-```json
-{
-  "host": "Atlanta",
-  "year": 1996,
-  "comment": "\"Centennial Olympics"
-}
-```
-
-#### Q19. Can trailing commas be used in objects and arrays?
-
-- [ ] yes
-- [ ] only if there is more than one item
-- [x] no
-- [ ] only when arrays and objects contain more than 10 items
-
-#### Q20. Which whitespace characters should be escaped within a string?
-
-- [ ] All whitespace is allowed.
-- [ ] double quotes, slashes new lines, and carriage returns
-- [x] new lines and carriage returns only
-- [ ] double quotes only
-
-#### Q21. Which is supported by YAML but not supported by JSON?
-
-- [ ] nested
-- [x] comments
-- [ ] arrays
-- [ ] null values
-
-#### Q22. Which is an invalid JSON value?
-
-- [ ] `"'|=(_)(X 72(_)|\/||\*'"`
-- [ ] `"|=(_)(X 72(_)|\/||\*"`
-- [ ] `"|=(_)(X\" \"72(_)|\/||\*"`
-- [x] `"\s(_)(X 72(_)|\/||\*"`
-
-#### Q23. How do you encode a date in JSON?
-
-- [ ] Convert the date to UTC and enclose in quotes.
-- [x] Encode the date as string using the ISO-8601 date format.
-- [ ] Wrap the date in double quotes.
-- [ ] Add a "date" key to your object and include the date as string.
-
-#### Q24. What’s wrong with this JavaScript?
-
-`JSON.parse({"first": "Sarah", "last": "Connor"}) ;`
-
-- [ ] JSON should be wrapped with curly braces.
-- [ ] JSON.parse() is missing an argument.
-- [x] The value supplied to JSON.parse() is not a string.
-- [ ] Nothing is wrong with it.
-
-#### Q25. What does this JavaScript code print?
-
-```js
-printNullness(JSON.parse('{ "lemmings": [] }'));
-printNullness(JSON.parse('{ "lemmings": null }'));
-printNullness(JSON.parse('{ "lemmings": "null" }'));
-
-function printNullness(testMe) {
-  if (testMe.lemmings == null) console.log('null');
-  else console.log('not null');
-}
-```
-
-- [x] A
-
-```
-not null
-null
-not null
-```
-
-- [ ] B
-
-```
-null
-null
-not null
-```
-
-- [ ] C
-
-```
-not null
-null
-null
-```
-
-- [ ] D
-
-```
-null
-null
-null
-```
-
-#### Q26. What tool might you use to validate your JSON?
-
-- [x] JSONLint
-- [ ] ValidateJSON
-- [ ] JSONFiddle
-- [ ] TextEdit
-
-#### Q27. What characters denote strings in JSON?
-
-- [x] double quotes
-- [ ] smart (curly) quotes
-- [ ] single or double quotes
-- [ ] single quotes
-
-#### Q28. Which code is a valid JSON equivalent of the key/value pair shown that also preserves the data type? `constant: 6.022E23`
-
-- [ ] `"constant": "6.022E23"`
-- [ ] `"constant": "6\.022\E23"`
-- [x] `constant: 6.022E23`
-- [ ] `constant: "6.022E23"`
-
-[Reference](https://json-schema.org/understanding-json-schema/reference/numeric.html) **Explanation**: Scientific Notation is a valid JSON number. You can use `e` or `E`.
-
-#### Q29. Which element is added to the DOM to create a JSON-P request?
-
-- [ ] `<object>`
-- [x] `<script>`
-- [ ] `<json>`
-- [ ] `<meta>`
-
-#### Q30. Why do so many APIs use JSON?
-
-- [ ] Because it's object-based.
-- [x] Because it's a simple and adaptable format for sharing data.
-- [ ] Because it's based on JavaScript.
-- [ ] Because it is derived from SGML.
-
-#### Q31. You need to assemble a list of members, but your JSON is not parsing correctly. How do you change it?
-
-```
-{
-  "avengers": [
-    "iron man",
-    "hulk",
-    "thor",
-    "black widow",
-    "ant man",
-    "spider man'
-  ]
-}
-```
-
-- [x] A
-
-```json
-{
-  "avengers": ["iron man", "hulk", "thor", "black widow", "ant man", "spider man"]
-}
-```
-
-- [ ] B
-
-```json
-{
-  'avengers': [
-  {'iron man',
-  'hulk',
-  'thor',
-  'black widow',
-  'ant man',
-  'spider man'}
-  ]
-}
-```
-
-- [ ] C
-
-```json
-{
-  "avengers": ["iron man", "hulk", "thor", "black widow", "ant man", "spider man"]
-}
-```
-
-- [ ] D
-
-```json
-{
-  "avengers": {[
-    "iron man",
-    "hulk",
-    "thor",
-    "black widow",
-    "ant man",
-    "spider man"
-  ]}
-}
-```
-
-#### Q32. When building dynamic web applications using AJAX, developers originally used the \_ data format, which has since been replaced by JSON.
-
-- [x] XML
-- [ ] GRAPHQL
-- [ ] REST
-- [ ] SOAP
-
-#### Q33. How is a true boolean value represented in JSON?
-
-- [ ] TRUE
-- [ ] "true"
-- [ ] 1
-- [x] true
-
-#### Q34. Which array is valid JSON?
-
-- [ ] ['tatooine', 'hoth', 'dagobah']
-- [ ] [tatooine, hoth, dagobah]
-- [ ] ["tatooine", "hoth", "dagobah",]
-- [x] ["tatooine", "hoth", "dagobah"]
-
-#### Q35. What data type is encoded in the outermost component of the JSON shown?
-
-```json
-[
-  {
-    "year": 2024
-  },
-  {
-    "location": "unknown"
-  }
-]
-```
-
-- [ ] object
-- [x] array
-- [ ] number
-- [ ] string
-
-#### Q36. Which is ignored by JSON but treated as significant by YAML?
-
-- [ ] trailing commas
-- [ ] trailing decimals
-- [x] whitespace
-- [ ] leading zeroes
-
-[Reference](https://www.geeksforgeeks.org/what-is-the-difference-between-yaml-and-json/)
-
-#### Q37. When you need to set the value of a key in JSON to be blank, what is the correct syntax for the empty value?
-
-- [ ] FALSE
-- [ ] 0
-- [ ] ""
-- [x] null
-
-#### Q38. How do you assign a number value in JSON?
-
-- [ ] Escape the number with a backslash.
-- [ ] Enclose the number in double quotes.
-- [ ] Enclose the number in single quotes.
-- [x] Leave the number as is.
-
-#### Q39. Which code uses the correct JSON syntax for encoding a key/value pair with a null value?
-
-- [x] "lastVisit": "null"
-- [ ] lastVisit: null
-- [ ] "lastVisit": 0
-- [ ] "lastVisit": undefined
-
-Note: None of the above options appear to be correct. A correct answer would be `"lastVisit": null`
-
-#### Q40. Which reference to the Unicode character U+1F602 complies with the JSON standard?
-
-- [ ] 128514
-- [ ] d83dde02
-- [x] \uD83D\uDE02
-- [ ] \&#128514;
-
-#### Q41. Which code uses the correct JSON syntax for a key/Value pair containing a string?
-
-- [x] "largest": "blue whale"
-- [ ] largest: 'blue whale'
-- [ ] 'largest': 'blue whale'
-- [ ] largest: "blue whale"
-
-#### Q42. Which key name is used to specify data type in a JSON schema?
+#### Q4. What does a MongoDB collection consist of?
 
 - [ ] data
-- [ ] schemadata
-- [ ] schematype
-- [x] type
+- [x] documents
+- [ ] fields
+- [ ] rows
 
-#### Q43. Which code is a valid JSON equivalent of the key/value pair shown that also preserves the original value?
+#### Q5. Given an ObjectId in `_id`, how do you get the time it was created?
 
-- [ ] "UPC": \043875
-- [ ] UPC: "043875"
-- [x] "UPC": 043875
-- [ ] UPC: '043875'
+- [ ] `getDateTime(_id)`
+- [ ] `_id.createDate()`
+- [x] `_id.getTimestamp()`
+- [ ] `_id.getDateTime()`
 
-#### Q44. Which data format is a JSON schema written in?
+#### Q6. Given a cursor named myCursor, which command returns a boolean value?
 
-- [ ] markdown
-- [ ] YAML
+- [x] myCursor.hasNext()
+- [ ] myCursor.sort()
+- [ ] myCursor.next()
+- [ ] myCursor.find()
+
+#### Q7. Which command returns a specific document in the user's collection?
+
+- [x] `db.users.find({_id: 1})`
+- [ ] `db.users.seek({_id: 1})`
+- [ ] `db.users.query({_id: 1})`
+- [ ] `db.query.users({_id: 1})`
+
+#### Q8. To import a JSON array into Mongo, what flags are needed with MongoDBimport?
+
+- [ ] `--type jsonArray`
+- [ ] `--json`
+- [ ] `--type json`
+- [x] `--jsonArray`
+
+#### Q9. Choose the shell command that connects to a MongoDB database.
+
+- [x] mongo
+- [ ] mongod
+- [ ] mongoconnect
+- [ ] dbconnect
+
+#### Q10. In the MongoDB shell, how can you tell if an index was used with a query?
+
+- [x] db.customers.find({lastName: 'smith'}).explain()
+- [ ] db.customers.find({lastName: 'smith'}).perf()
+- [ ] db.customers.find({lastName: 'smith'}).plan()
+- [ ] db.customers.find({lastName: 'smith'}).usedIndex()
+
+#### Q11. Suppose your aggregation pipeline terminated with an exception referring to exceeded memory limit. What is the best way to resolve the issue?
+
+- [ ] Set useMemory to twice amount indicated in exception.
+- [ ] Switch a 64 bit instance of MongoDB.
+- [ ] Increase the memory of the MongoDB server.
+- [x] Set allowDiskUse to true.
+
+#### Q12. What is the recommended way to delete a user?
+
+- [ ] db.deleteUser("user")
+- [ ] db.removeUser("user") DEPRECATED
+- [ ] db.remove("user")
+- [x] db.dropUser("user")
+
+#### Q13. What the primary database in a replica set fails, when does failover begin?
+
+- [ ] once the primary has been down for 10 minutes
+- [ ] once the primary reboots
+- [x] immediately
+- [ ] after the administrator reboots the primary
+
+#### Q14. What is the correct option to set up Kerberos when starting MongoDBd?
+
+- [x] `--setParameter authenticationMechanisms=GSSAPI`
+- [ ] `--setAuthentication=GSSAPI`
+- [ ] `--setParam auth=K`
+- [ ] `--setAuth method=Kerberos`
+
+#### Q15. What is the purpose of an arbiter in a replica set?
+
+- [ ] It monitors replica set and sends email in case of failure
+- [x] It casts the tie-breaking vote in an election.
+- [ ] It holds a backup copy of the database.
+- [ ] It reboots the failed server.
+
+#### Q16. You want to know how many types of items you have in each category. Which query does this?
+
+- [ ] `db.product.group({_id: "$category", count: {$sum:1}})`
+- [ ] `db.product.aggregate($sum: {_id: "$category", count: {$group:1}})`
+- [x] `db.product.aggregate($group: {_id: "$category", count: {$sum:1}})`
+- [ ] `db.product.aggregate($count: {_id: "$category", count: {$group:1}})`
+
+#### Q17. To restrict the number of records coming back from a query, which command should you use?
+
+- [ ] take
+- [x] limit
+- [ ] max
+- [ ] skip
+
+#### Q18. You have a collection named restaurants with the geographical information stored in the location property, how do you create a geospatial index on it?
+
+- [x] `db.restaurants.createIndex({location: "2dsphere"})`
+- [ ] `db.restaurants.geospatial({location: "2dsphere"})`
+- [ ] `db.restaurants.createIndex("2dsphere":"location")`
+- [ ] `db.restaurants.createIndex({geospatial: "location"})`
+
+#### Q19. How do you find documents with a matching item in an embedded array?
+
+- [ ] `db.customers.findmatch ({"jobs":"secretary"})`
+- [ ] `db.customers.find ({"jobs:secretary"})`
+- [ ] `db.customers.find ({"jobs":["secretary"]})`
+- [x] `db.customers.find ({"jobs":"secretary"})`
+
+#### Q20. Which query bypasses the first 5 customers and returns the next 10?
+
+- [ ] `db.customers.find({}, {skip: 5, limit: 10})`
+- [ ] `db.customers.find({}.page(5).take(10))`
+- [ ] `db.customers.find({}).skip(5).take(10)`
+- [x] `db.customers.find({}).skip(5).limit(10)`
+
+#### Q21. How do you create a text index?
+
+- [ ] `db.customers.createIndex({firstName, lastName})`
+- [ ] `db.customers.createTextIndex({firstName, lastName})`
+- [x] `db.customers.createIndex({firstName: "text", lastName: "text"})`
+- [ ] `db.customers.createText({firstName: 1, lastName: 1})`
+
+#### Q22. Assuming you have customers collection with a firstName and lastName field, which is the correct MongoDB shell command to create an index on lastName, then firstName both ascending?
+
+- [ ] `db.customers.createIndex("lastName, firstName, ASC")`
+- [ ] `db.customers.addIndex({lastName:"ASC", firstName: "ASC"})`
+- [ ] `db.customers.newIndex({lastName:1, firstName:1})`
+- [x] `db.customers.createIndex({lastName:1, firstName: 1})`
+
+#### Q23. One of the documents in your collection has an \_id based upon an older database design and you want to change it. You write an update command to find the document and replace the \_id but the \_id isn't changed. How should you fix the issue?
+
+- [ ] Set the replace option to true.
+- [ ] Use the replaceOne() command instead.
+- [x] You can't. Once set, the \_id field cannot be changed.
+- [ ] Use the updateOne() command instead.
+
+#### Q24. A compound index allows you to \_ ?
+
+- [ ] Calculate interest quickly.
+- [ ] Accomplish nothing, since compound indexes aren't allowed in Mongo.
+- [ ] Use more than one field per index.
+- [x] Combine fields in different collations.
+
+#### Q25. Why are ad-hoc queries useful?
+
+- [ ] They do not have to use the same operators.
+- [ ] You do not need to structure the database to support them.
+- [ ] They autogenerate reports.
+- [x] They run faster than indexed queries.
+
+#### Q26. How often do the members of a replica set send heartbeats to each other?
+
+- [ ] every 2 minutes
+- [ ] every 5 seconds
+- [x] every 2 seconds
+- [ ] every 10 seconds
+
+#### Q27. Which command returns all of the documents in the customers collection?
+
+- [ ] `db.customers.all();`
+- [ ] `db.find().customers();`
+- [x] `db.customers.find();`
+- [ ] `db.customers.show();`
+
+#### Q28. Given a cursor named myCursor, pointing to the customers collection, how to you get basic info about it?
+
+- [ ] `myCursor.stats()`
+- [ ] `myCursor.dump()`
+- [ ] `myCursor.info()`
+- [x] `myCursor.explain()`
+
+#### Q29. What is true about indexes?
+
+- [x] They speed up read access while slowing down writes.
+- [ ] They secure the database from intruders.
+- [ ] They speed up reads and writes.
+- [ ] They speed up write access while slowing down reads.
+
+#### Q30. What is the preferred format to store geospatial data in MongoDB?
+
+- [ ] Latitude, longitude
 - [ ] XML
-- [x] JSON
+- [x] GeoJSON
+- [ ] BSON
 
-#### Q45. Which code is valid JSON equivalent of the key/value pair shown that also preserves the data type?
+#### Q31. Which programming language is used to write MongoDB queries? (_Alternative_: In the MongoDB shell, what programming language is used to make queries?)
 
-- [x] "variance": "-0.0823"
-- [ ] variance: "-0.0823"
-- [ ] "variance": "\-0.0823"
-- [ ] variance: -0.0823
-
-#### Q46. With what character should key/value pairs be separated?
-
-- [x] colon
-- [ ] space
-- [ ] semicolon
-- [ ] comma
-
-#### Q47. What character separates keys from values?
-
-- [x] :
-- [ ] ->
-- [ ] ::
-- [ ] .
-
-#### Q48. If a string contains line breaks, what should you do?
-
-- [ ] Wrap line breaks in single quotation marks
-- [ ] Make no changes, because whitespace is allowed
-- [ ] Replace any line breaks with `\r`
-- [x] Replace any line breaks with `\n`
-
-#### Q49. Which number types are available in javascript but not supported in json?
-
-- [ ] Fractional and Transcendental
-- [ ] Infinity or Rational
-- [ ] Rational and Irrational
-- [x] Infinity or NaN
-
-#### Q50. How should a date value be stored in JSON?
-
-- [ ] As a string with quotes
-- [ ] As a string without quotes
-- [ ] As a string in ISO 8583 format
-- [x] As a string in ISO 8601 format
-
-#### Q51. Is the JSON code shown here valid?
-
-![JSON object with key "Vehicles" containing an array of emojis](images/Q51/Q51.jpeg)
-
-- [ ] No, emojis must be escaped with a backslash.
-- [ ] No, JSON strings are not allowed to use emojis.
-- [ ] No, emojis should never be enclosed with double quotes.
-- [x] Yes, emojis are valid characters because JSON strings are unicode.
-
-#### Q52. What data structure do you use to encode ordered information?
-
-- [ ] list
-- [x] array
-- [ ] struct
-- [ ] indexed hash
-
-#### Q53. What are valid values in JSON?
-
-- [ ] arrays, strings, numbers, true/false
-- [ ] hashes, arrays, strings, numbers, booleans, null
-- [ ] arrays, objects, lists, strings, numbers, booleans
-- [x] objects, arrays, strings, numbers, booleans, null
-
-#### Q54. Which key format is valid JSON?
-
-- [ ] key: "value"
-- [x] "key": "value"
-- [ ] key, "value"
-- [ ] 'key': 'value'
-
-#### Q55. What data type is encoded in the outermost component of the JSON shown?
-
-```json
-{
-  "result": [
-    {
-      "year": 2024
-    },
-    {
-      "location": "unknown"
-    }
-  ]
-}
-```
-
-- [ ] number
-- [ ] array
-- [ ] string
-- [x] object
-
-#### Q56. What's wrong with this JSON object?
-
-```json
-{
-  "series": "Star Trek",
-  "episodes": "The Trouble with Tribbles"
-}
-```
-
-- [ ] Key/value pairs should be separated by semicolons.
-- [x] Keys should be enclosed with double quotes.
-- [ ] Key/value pairs should always have a trailing comma.
-- [ ] Keys and values should be enclosed with single quotes.
-
-#### Q57. How should comments be formatted in JSON?
-
-- [ ] Wrap the comments in single quotes and place it at the bottom of the file.
-- [ ] Wrap the comments in double parentheses.
-- [ ] Escape comments by placing two slashes at the start of the comment.
-- [x] JSON does not support comments.
-
-#### Q58. How would you make the following string valid in JSON?
-
-```json
-"name": 'bb-8'
-```
-
-- [ ] name: "bb-8"
-- [ ] "name": \'bb-8\'
-- [x] "name": "bb-8"
-- [ ] "name": bb-8
-
-#### Q59. How are values separated in JSON?
-
-- [ ] with brackets
-- [ ] with colons
-- [x] with commas
-- [ ] with parentheses
-
-#### Q60. With which programming language is JSON best used?
-
-- [x] any language, as JSON is language agnostic.
-- [ ] Ruby
-- [ ] JavaScript
 - [ ] Python
+- [x] JavaScript
+- [ ] SQL
+- [ ] TypeScript
 
-#### Q61. What values can arrays contain?
+#### Q32. You have two text fields in your document and you'd like both to be quickly searchable. What should you do?
 
-- [ ] only numbers
-- [x] any valid JSON value
-- [ ] only strings and numbers
-- [ ] only strings
+- [x] Create a text index on each field.
+- [ ] MongoDB is not able to do this.
+- [ ] Create a compound text index using both fields.
+- [ ] Create a text index on one field and a single field index on the other.
 
-#### Q62. What technique can be used to represent complex objects with JSON?
+#### Q33. To import a CSV file into MongoDB, which command should you issue?
 
-- [ ] reserialization
-- [x] nesting
-- [ ] memorization
-- [ ] minimization
+- [ ] mongorestore
+- [ ] mongoi
+- [ ] upload
+- [x] mongoimport
 
-#### Q63. What characters are used to enclose an array?
+#### Q34. In an MongoDB mapReduce command, the reduce function should \_.
 
-- [x] `[]`
-- [ ] `{}`
-- [ ] `""`
-- [ ] `()`
+- [ ] access the database
+- [ ] be called only when the key has a single value
+- [ ] access the database only to perform read operations
+- [x] not access the data
 
-#### Q64. What is the official MIME type for JSON?
+#### Q35. On a newly created collection, which field will have an index?
 
-- [ ] text/json
-- [ ] text/javascript
-- [x] application/json
-- [ ] data/json
+- [ ] the name field
+- [ ] the ObjectId field
+- [x] the `_id` field
+- [ ] no field will have an index
 
-#### Q65. Which character cannot be part of string within JSON without additional formatting?
+#### Q36. You have a collection of thousands of students. You'd like to return the second set of 20 documents from the sorted collection. What is the proper order in which to apply the operations?
 
-- [ ] /
-- [x] "
-- [ ] -
-- [ ] :
+- [ ] limit, skip, sort
+- [ ] sort, limit, skip
+- [ ] limit, sort, skip
+- [x] sort, skip, limit
 
-#### Q66. What is the purpose of JSON?
+#### Q37. You would like the stats() command to return kilobytes instead of bytes. Which command should you run?
 
-- [x] to provide a simple way to serialize and deserialize data between different sources
-- [ ] to provide a way to store data for machine learning
-- [ ] to provide an archival solution for data warehousing
-- [ ] to provide a way for JavaScript to run other languages
+- [x] `db.vehicle.stats(1024)`
+- [ ] `db.vehicle.stats("kilobytes")`
+- [ ] `db.vehicle.stats(true)`
+- [ ] `db.vehicle.stats("kb")`
 
-#### Q67. Can you assume the order of keys in an object?
+#### Q38. You want to modify an existing index. What is the best way to do this?
 
-- [x] No, but you can sort the keys with `JSON.sort()`.
-- [ ] Yes, object keys are always ordered alphabetically.
-- [ ] Yes, but only when the object is first parsed.
-- [ ] No, you can never assume object keys will be in order.
+- [ ] Use the `reIndex()` command to modify the index.
+- [x] Delete the original index and create a new index.
+- [ ] Call the `createIndex()` command with the update option.
+- [ ] Use the `updateIndex()` command.
 
-#### Q68. With what character should object keys be enclosed?
+#### Q39. You need to delete the index you created on the description field. Which command will accomplish this?
 
-- [ ] `*`
-- [ ] `#`
-- [ ] `^`
-- [x] `"`
+- [x] `db.vehicle.dropIndex("description_text")`
+- [ ] `db.vehicle.dropIndex({"description":"text"})`
+- [ ] `db.vehicle.removeIndex({"description":"text"})`
+- [ ] `db.vehicle.removeIndex("description_text")`
 
-#### Q69. What is the maximum number of key/value pairs that JSON supports?
+#### Q40. You would like to know how many different categories you have. Which query will best get the job done?
 
-- [ ] 10,000
-- [ ] 1000
-- [x] There is no defined limit.
-- [ ] 1 million
+- [ ] `db.vehicle.distinct("category")`
+- [ ] `db.vehicle.unique("category")`
+- [ ] `db.vehicle.distinct("category").count()`
+- [x] `db.vehicle.distinct("category").length`
 
-#### Q70. What is the recommended term used to refer to multiple resources?
+**Note**: count() works with find(...) but length works with distinct
 
-- [ ] a swarm
-- [x] multiple resources
-- [ ] a collection
-- [ ] a group
+#### Q41. From the MongoDB shell, how do you create a new document in the customers collection?
 
-#### Q71. Does JSON support signed numbers?
+- [ ] `db.customers.add({name: "Bob"})`
+- [x] `db.customers.save({name: "Bob"})`
+- [ ] `db.customers.create({name: "Bob"})`
+- [ ] `db.customers.new({name: "Bob"})`
 
-- [ ] yes, but only if they are enclosed in quotes
-- [ ] only with integers
-- [x] no
-- [ ] yes
+#### Q42. Which field is required of all MongoDB documents?
 
-#### Q72. What two nonnumerical characters can numbers contain?
+- [x] `_id`
+- [ ] `_name`
+- [ ] ObjectId
+- [ ] mongoDB is schema-less so no field is required
 
-- [x] dash and dot
-- [ ] dash and comma
-- [ ] comma and exclamation point
-- [ ] dot and comma
+#### Q43. A MongoDB instance has at least what three files?
 
-#### Q73. What JavaScript method is used to load JSON data?
+- [x] data, namespace, and journal
+- [ ] namespace, journal, and log
+- [ ] journal, data, and database
+- [ ] data, log, and journal
 
-- [ ] JSON.ingest()
-- [ ] JSON.convert()
-- [ ] JSON.read()
-- [x] JSON.parse()
+#### Q44. You'd like a set of documents to be returned in last name, ascending order. Which query will accomplish this?
 
-#### Q74. How are the values in an array separated?
+- [ ] `db.persons.find().sort({lastName: -1}}`
+- [x] `db.persons.find().sort({lastName: 1}}`
+- [ ] `db.persons.find().sort({lastName: ascending}}`
+- [ ] `db.persons.find().sort({lastName: $asc}}`
 
-- [ ] with right arrows
-- [ ] with colons
-- [ ] with semicolons
-- [x] with commas
+#### Q45. What is NOT a standard role in MongoDB?
 
-#### Q75. What is the minimum number of values in an array?
+- [ ] restore
+- [ ] read/write
+- [x] dbadmin
+- [ ] delete collections
 
-- [x] zero
-- [ ] one
-- [ ] two
-- [ ] three
+#### Q46. Which MongoDB shell command deletes a single document?
 
-#### Q76. In JSON, a set of brackets ([]) is used to denote **\_**, whereas curly braces ({}) denote **\_**.
+- [ ] `db.customers.delete({_id: 1});`
+- [ ] `db.customers.drop({_id: 1});`
+- [ ] `db.drop.customers({_id: 1});`
+- [x] `db.customers.remove({_id: 1});`
 
-- [x] arrays; objects
-- [ ] objects; functions
-- [ ] arrays; functions
-- [ ] key/value pairs; arrays
+#### Q47. Using the MongoDB shell, how do you remove the customer collection and its indexes?
 
-#### Q77. How does JSON represent truth, falsity and nullness?
+- [ ] `db.customers.remove({}).indexes();`
+- [ ] `db.customers.remove({});`
+- [x] `db.customers.drop();`
+- [ ] `db.customers.delete();`
 
-- [x] true, false, null
-- [ ] true, false
-- [ ] TRUE, FALSE, NULL
-- [ ] true, false, null
+#### Q48. By default, applications direct their read operations to which member of the replica set?
 
-#### Q78. If an object key contains spaces, how can you access its value in JavaScript?
+- [x] primary
+- [ ] arbiter
+- [ ] secondary
+- [ ] backup
 
-- [ ] Remove spaces from the key before accessing the value.
-- [ ] Use dot notation to access the value.
-- [ ] Use object key index to access the value.
-- [x] Use bracket notation to access the value.
+#### Q49. You need to get the names of all the indexes on your current collection. What is the best way to accomplish this?
 
-#### Q79. When parsing JSON, "caching" is a method used to \_.
+- [ ] `db.people.getName();`
+- [ ] `db.people.reIndex({names: 1});`
+- [ ] `db.people.getIndexKeys();`
+- [x] `db.people.getIndexes();`
 
-- [ ] remove duplicate data from a server
-- [x] temporarily store data for faster access
-- [ ] store excess information in chunks to be reviewed later
-- [ ] clog up a web browser with useless information
+#### Q50. You are going to do a series of updates to multiple records. You find setting the multi option of the update() command too tiresome. What should you do instead?
 
-#### Q80. What is the only valid whitespace character within a string that does not require an escape character?
+- [ ] Use the replaceMany() command instead
+- [ ] Use the updateMulti() command instead
+- [x] Use the updateMany() command instead
+- [ ] Set the global multi option to True
 
-- [ ] line break
-- [x] space
-- [ ] tab
-- [ ] return
+#### Q51. To cleanly shut down MongoDB, what command should you use from the MongoDB shell?
 
-#### Q81. What technique can you use to safely encode very large numbers?
+- [ ] quit()
+- [ ] exit()
+- [x] db.shutdownServer()
+- [ ] db.shutdown()
 
-- [x] Store the number as a string
-- [ ] Convert the number into an exponent.
-- [ ] Round the number to the nearest 10-digit number.
-- [ ] Split the number into smaller parts.
+#### Q52. Given a customer collection which includes fields for gender and city, which aggregate pipeline shows the number of female customers in each city? (_Alternative_: How can you view the execution performance statistics for a query?)
 
-#### Q82. Which code is a valid JSON equivalent of the key/value pair shown that also preserves the data type?
+- [x] `db.members.aggregate([ {$match: {gender: "Female"}}, {$group: {_id: {city: "$city"}, number: {$sum: 1}}}, {$sort :{number: -1}}])`
+- [ ] `db.members.find({$match: {gender: "Female"}}, {$group: {_id: {city: "$city"}, number: {$sum: 1}}}.$sort ({number: -1})`
+- [ ] `db.members.find([ {$match: {gender: "Female"}}, {$group: {_id: {city: "$city"}, number: {$sum: 1}}}, {$sort :{number: -1}}])`
+- [ ] `db.members.aggregate([ {$match: {gender: "Female"}}, {$sort :{number: -1}}])`
 
-```json
-variance: -0.0823
-```
+#### Q53. When no parameters are passed to `explain()`, what mode does it run in?
 
-- [ ] variance: "-0.0823"
-- [ ] variance: -0.0823
-- [x] "variance": "-0.0823"
-- [ ] "variance": "\-0.0823"
+- [ ] wireTiger mode
+- [ ] executionStats mode
+- [x] queryPlanner mode
+- [ ] allPlansExecution mode
 
-[Reference data types in json](https://www.w3schools.com/js/js_json_datatypes.asp)
+#### Q54. What is the correct query to find all of the people who have a home phone number defined?
 
-#### Q83. Based on the JSON object shown, which JavaScript code would you use to find out what is in this vehicle's glove box while assigning the glove box contents to a new variable?
+- [ ] `db.person.find({exists: 'homePhone'});`
+- [ ] `db.person.exists({homePhone: true});`
+- [x] `db.person.find({homePhone: {$exists: true}});`
+- [ ] `db.person.has('homePhone');`
 
-```js
-myVehicleContents = {
-  van: {
-    inside: {
-      'glove box': 'maps',
-      'passenger seat': 'crumbs',
-    },
-    exterior: {
-      trunk: 'jack',
-    },
-  },
-};
-```
+#### Q55. Which file in the MongoDB directly holds the MongoDB daemon?
 
-- [ ] A
+- [ ] mongodb
+- [x] mongo-daemon
+- [ ] daemon
+- [x] mongod
 
-```js
-myVehicleContents.van.inside['glove box'] = gloveBoxContents;
-```
+#### Q56. You have just secured your previously unsecured MongoDB server, but the server is still not requiring authentication. What is the best option?
 
-- [x] B
+- [x] Restart the `mongod` process.
+- [ ] Issue the `secure()` command.
+- [ ] Issue the `mongoimport` command.
+- [ ] Issue the `authenticate()` command.
 
-```js
-var gloveBoxContents = myVehicleContents.van.inside['glove box'];
-gloveBoxContents;
-```
+#### Q57. What is the most accurate statement regarding MongoDB and ad hoc queries?
 
-- [ ] C
+- [x] MongoDB does not allow ad hoc queries; all queries require an index.
+- [ ] Ad hoc queries are allowed only in the paid version.
+- [ ] Ad hoc queries are allowed only through the ad hoc command.
+- [x] MongoDB allows ad hoc queries.
 
-```js
-var gloveBoxContents = myVehicleContents.van.glove box.contents;
-gloveBoxContents;
-```
+#### Q58. In MongoDB, what does a projection do?
 
-- [ ] D
+- [ ] allows you to do a calculation on the results
+- [ ] allows you to run queries on the server
+- [x] allows you to select which fields should be in the return data
+- [ ] allows you to format the results for a display
 
-```js
-myVehicleContents.van.inside['inside'] = gloveBoxContents;
-```
+#### Q59. To remove a database and all of its records from MongoDB, what operator should you use?
 
-[Source](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
+- [x] `dropDatabase()`
+- [ ] `removeAll()`
+- [ ] `clear()`
+- [ ] `deleteDatabase()`
 
-#### Q84. What characters are used to define an object?
+#### Q60. What option can be passed to start the MongoDB shell without connecting to a database?
 
-- [ ] ||
-- [x] {}
-- [ ] ()
-- [ ] []
+- [ ] `-db=null`
+- [ ] `--shell-only`
+- [ ] `--free`
+- [x] `-nodb`
 
-#### Q85. The JSON structure features nested objects and arrays. Sometimes the data containing these features exists in relational databases. How is the relational structure different that JSON?
+#### Q61. How can you improve the appearance of the output JSON that contains the `_id`?
 
-- [ ] It has a flat architecture.
-- [ ] It has a rewritable structure.
-- [x] It has an array-only structure.
-- [ ] It has a table structure.
+- [ ] `Use db.collection.set({$_id:pretty})`
+- [ ] `Create a second index`
+- [x] `Use db.collection.format(numeric)`
+- [ ] `Use $_id = value`
 
-#### Q86. What is supported by YAML but not supported by JSON?
+#### Q62. What happens to a Replica set oplog if it runs out of memory?
 
-- [ ] arrays
-- [ ] null values
-- [x] comments
-- [ ] nested
+- [x] `The oplog will be saved on one of the secondary servers.`
+- [ ] `The oplog is capped collection and can't run out of memory`
+- [ ] `The MongoDB instance will fail`
+- [ ] `The oplog will stop recording logging information`
 
-`YAML supports # comments but not JSON`
+#### Q63. MongoDB ships with a variety of files. Which file runs the MongoDB shell?
 
-#### Q87. Which is an invalid JSON value? (same as previous question, but different possible answers)
+- [x] mongo
+- [ ] mongo-s
+- [ ] shell
+- [ ] mongo-shell
 
-- [ ] `"'|=(_)(X 72(_)|\/||*'"`
-- [x] `"\s(_)(X 72(_)|\/||*"`
-- [ ] `"|=(_)(X\" \"72(_)|\/||*"`
-- [ ] `"|=(_)(X 72(_)|\/||*"`
+#### Q64. How can you view the execution performance statistics for a query?
+
+- [ ] `db.performance.members.aggregate([ {$match: {gender: "Female"}}, {$group: {_id:{city:"$city"}, number: {$sum: 1}}}, {$sort : {number: -1}}])`
+- [x] `db.members.aggregate([ {$match: {gender: "Female"}}, {$group: {_id: {city: "$city"}, number:{$sum:1}}}, {$sort: {number:-1}}]).explain("executionStats")`
+- [ ] `db.members.aggregate([ {$match: {gender: "Female"}}, {$group:{_id: {city: "$city"}, number: {$sum: 1}}}, {$sort: {number: -1}}]).explain()`
+- [ ] `db.members.aggregate([ {$match: {gender: """Female"""}}, {$group: {_id: {city: """$city"""}, number: {$sum:1}}}, {$sort: {number: -1}}]).number()`
+
+#### Q65. From the MongoDB shell, how do you execute a JavaScript file named list.js?
+
+- [ ] node 'list.js'
+- [ ] exec('list.js)
+- [ ] run('list.js)
+- [x] load('list.js)
+
+#### Q66. Which MongoDB shell query will sort the customer's collection by name descending?
+
+- [ ] db.customers.sort({name: -1}.find({})
+- [ ] db.customers.sort({name: -1})
+- [x] db.customers.find({}).sort({name: -1})
+- [ ] db.customers.find({}).sort({name: 1})
+
+#### Q67. Suppose you are using the mongoimport command to import personnel data and there is a unique index on the email field. What happens when there are duplicate emails in the import?
+
+- [ ] The import command aborts without importing any records.
+- [ ] The import command imports records upto but not including the record, and then aborts.
+- [ ] The import command doesn't import the bad document but does import the rest.
+- [x] The import command prompts you to correct the bad record.
+
+#### Q68. You have a collection with millions of documents. Each time you attempt to sort. MongoDB runs out of memory. What might help?
+
+- [ ] Use the purge operator before the sort.
+- [ ] Return the entire collection and sort on the client.
+- [ ] Pass the --more-memory option.
+- [x] Create an index on the field you are sorting.
+
+#### Q69. You need to be able to quickly find a word in a text field. What should you do?
+
+- [ ] Create a text index on the field and do a $text Query.
+- [ ] Create an single field index in descending order, and do a query for the word.
+- [x] Do a $text query.
+- [ ] Create a $regex on the fields, and do a $regex query.
+
+#### Q70. Which field is always included in a projection unless specifically excluded?
+
+- [ ] index
+- [ ] Name
+- [x] `_id`
+- [ ] row number
+
+[Reference](https://docs.mongodb.com/manual/reference/operator/aggregation/project/#definition)
+
+#### Q71. After installing MongoDB on your machine, what must you do before launching Mongo?
+
+- [ ] Create a user account.
+- [ ] Register online.
+- [ ] Create a data directory.
+- [x] Establish security credentials.
+
+[mongodb site](https://docs.mongodb.com/manual/tutorial/verify-mongodb-packages/#verify-integrity-of-mongodb-packages)
+
+#### Q72. How does a --jsonArray file need to be structured?
+
+- [x] as a properly formatted JSON array
+- [ ] as YAML
+- [ ] as plain text
+- [ ] as a BSON object
+
+[Section blog](https://www.section.io/engineering-education/handling-json-in-mongodb/)
+
+#### Q73. From the MongoDB shell, how do you display all of a database's memory usage?
+
+- [ ] db.size()
+- [ ] db.info()
+- [ ] db.memory()
+- [x] db.stats()
+
+#### Q74. How do you create a new MongoDB user?
+
+- [x] db.createUser({})
+- [ ] db.insert({user: 1})
+- [ ] db.customers.newUser({})
+- [ ] db.newUser({})
+
+[MongoDB documentation](https://docs.mongodb.com/manual/tutorial/create-users/)
+
+#### Q75. What is the internal data structure of a MongoDB document?
+
+- [ ] JSON (JavaScript Object Notation)
+- [x] BSON (Binary JSON)
+- [ ] ORM (object relational mode)
+- [ ] MBF (MongoDB binary format)
+
+[MongoDB documentation](https://www.mongodb.com/docs/manual/core/document/)
+[JSON and BSON](https://www.mongodb.com/json-and-bson)
+
+#### Q76. Which projection shows only the FirstName and lastName fields of a document in the customers collection?
+
+- [ ] `db.customers.find({}, {firstName: 1, lastName: 1})`
+- [x] `db.customers.find({}, {_id:0, firstName: 1, lastName: 1})`
+- [ ] `db.customers.find({_id: 0, year: 1, maek: 1, model: 1})`
+- [ ] `db.customers.find({}).project({firstName: 1, lastName: 1})`
+
+#### Q77. Documents in mongodb are atomic at the \_\_\_ level
+
+- [ ] database
+- [ ] field
+- [ ] no
+- [x] document
+
+[MongoDB reference](https://www.mongodb.com/docs/manual/core/write-operations-atomicity/#:~:text=In%20MongoDB%2C%20a%20write%20operation,documents%20within%20a%20single%20document.)
+
+#### Q78. What should the priority of a member be in order to prevent it from becoming the primary in replica set?
+
+- [ ] 1
+- [ ] null
+- [x] 0
+- [ ] -1
+
+[MongoDB reference](https://www.mongodb.com/docs/manual/tutorial/configure-secondary-only-replica-set-member/#assign-priority-value-of-0)
+
+#### Q79. You need to add an index to the large name collection in your production database. You do not want to have disruption of service for your users and you can't afford to have a team to do the work during after hours. What should you do?
+
+- [ ] Use the reIndex() command to add the index quickly.
+- [x] Use the createIndex() command with the option background = true.
+- [ ] Use the createIndex() command.
+- [ ] Use the createIndex() command with the option parallel = true.
+
+[MongoDB reference](https://www.mongodb.com/docs/v4.0/reference/method/db.collection.createIndex/#options)
+
+#### Q80. When using aggregation $convert. which is not a parameter?
+
+- [ ] input
+- [x] output
+- [ ] to
+- [ ] onError
+
+[MongoDB reference](https://www.mongodb.com/docs/manual/reference/operator/aggregation/convert/#definition)
+
+#### Q81. All tag values in tag sets must be \_.
+
+- [ ] JSON
+- [ ] integers
+- [x] strings
+- [ ] XML
+
+[MongoDB reference](https://www.mongodb.com/docs/manual/core/read-preference-tags/)
+
+#### Q82. When using the mongoimport command, how can you drop the database before importing?
+
+- [x] Use the -d option.
+- [ ] Use the mongooverwrite command instead of mongoimport.
+- [ ] Use the -drop option.
+- [ ] Drop the database manually before importing.
+
+#### Q83. To import a CSV file into MongoDB, which command should you issue?
+
+- [ ] upload
+- [ ] mongorestore
+- [ ] mongoi
+- [x] mongoimport
+
+#### Q84. A critical record must be replicated to the two other servers in the set. Which query guarantees that it is inserted as desired?
+
+- [ ] `db.inventory.insert({ prodid: "tab1122", qty : 10}, { writeConcern: { w: 2, wtimeout: 5000} })`
+- [ ] `db.inventory.insert({ prodid: "tab1122", qty : 10}, { writeConcern: { j: true} })`
+- [ ] `db.inventory.insert({ prodid: "tab1122", qty : 10}, { writeConcern: { w: 2, j:false, wtimeout: 5000} })`
+- [x] `db.inventory.insert({ prodid: "tab1122", qty : 10}, { writeConcern: { w: 2, j:true, wtimeout: 5000} })`
+
+[MongoDB reference](https://www.mongodb.com/docs/manual/reference/write-concern/)
+
+#### Q85. What is the name of the default file used to configure MongoDB?
+
+- [ ] mongo.config
+- [x] mongod.conf
+- [ ] config.sys
+- [ ] .mdbconfig
+
+[MongoDB reference](https://www.mongodb.com/docs/manual/reference/configuration-options/)
+
+#### Q86. After using the dropIndexes() command on your collection, one index remains.What can you do to drop the the remaining index?
+
+- [ ] Use dropIndexes({all:1}) with the all parameter.
+- [x] The required_id index cannot be deleted.
+- [ ] Call dropIndex({"<em>id</em>":1}) to force its removal.
+- [ ] Call dropIndex({"<em>id</em>"}) to force its removal.
+
+[MongoDB reference](https://www.mongodb.com/docs/manual/reference/method/db.collection.dropIndex/)

@@ -20,34 +20,35 @@ const playlistSchema = new mongoose.Schema({
 
 const Playlist = new mongoose.model('Playlist', playlistSchema)
 
-const createDocument = async () => {
-    const abcd = new Playlist({
+// const createDocument = async () => {
+//     const abcd = new Playlist({
             
-                name: 'piyush sir',
-                Dob: '11-march-1981',
-                occupation: 'software engineer',
-                role: 'TPO of company',
-                membersince: 13
-            })
-        const abcd1 = new Playlist({name: 'kishan sir',
-        Dob: '11-march-1981',
-        occupation: 'software engineer',
-        role: 'TPO of company',
-        membersince: 13})
-    const fhfh=new Playlist({
+//                 name: 'fsdgwegg sir',
+//                 Dob: '11-march-1981',
+//                 occupation: 'software engineer',
+//                 role: 'TPO of company',
+//                 membersince: 13
+//             })
+//         const abcd1 = new Playlist({name: 'gdfgge sir',
+//         Dob: '11-march-1981',
+//         occupation: 'software engineer',
+//         role: 'TPO of company',
+//         membersince: 13})
+//     const fhfh=new Playlist({
         
-            name: 'ashish sir',
-            Dob: '11-march-1981',
-            occupation: 'software engineer',
-            role: 'TPO of company',
-            membersince: 13
+//             name: 'dfgtgrg sir',
+//             Dob: '11-march-1981',
+//             occupation: 'software engineer',
+//             role: 'TPO of company',
+//             membersince: 13
         
-    })
+//     })
 
-    const ress = await abcd.save();
-    const ress1 = await abcd1.save();
-    const ress2 = await fhfh.save();
-    console.log('data saved succesfully' + ress+ress1+ress2);
+//     const ress = await Playlist.insertMany([abcd,abcd1,fhfh])
+//     console.log('data saved succesfully' + ress);
+// }
+const getDocument=async()=>{
+    const result=await Playlist.find();
+    console.log(result);
 }
-createDocument();
-
+getDocument();
